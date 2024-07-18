@@ -11,8 +11,8 @@ import LandingPage from "./Layout/Landingpage/LandingPage";
 function App() {
   return (
     <>
-    <LandingPage />
-      {/* <Navbar />
+    {/* <LandingPage /> */}
+      <Navbar />
       <div className="main-container">
       <section className="page page1">
           <Home />
@@ -28,7 +28,7 @@ function App() {
         <section className="page page4">
         <About/>
         </section>
-      </div> */}
+      </div>
     </>
   );
 }
