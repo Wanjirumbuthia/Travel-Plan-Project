@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import './login.css';
 
 const LoginForm = () => {
@@ -82,6 +83,7 @@ const LoginForm = () => {
         .then((response) => response.json())
         .then((data) => {
           console.log('Sign up successful!');
+
           // You can redirect the user to the login page or display a success message
         })
         .catch((error) => {
@@ -120,7 +122,7 @@ const LoginForm = () => {
               required
             />
           </label>
-          <button type="submit" className="submit">Login</button>
+          <button type="submit" className="submit"><Link to="/app">Login</Link> </button>
         </form>
         <p className="forgot-pass">Forgot Password?</p>
 
@@ -204,7 +206,7 @@ const LoginForm = () => {
                 required
               />
             </label>
-            <button type="submit" className="submit">Sign Up Now</button>
+            <button type="submit" className="submit"><Link to="/app">Sign Up Now</Link> </button>
           </form>
         </div>
       </div>
