@@ -14,8 +14,12 @@ function Navbar() {
         <nav>
           <ul>
             <li> Home </li>
-            <li>About </li>
+            <li>Plan</li>
             <li>Profile </li>
+            <li>About </li>
+
+
+
 
           </ul>
         </nav>

@@ -11,12 +11,12 @@ function App() {
   return (
     <>
       <Navbar />
-      {/* <div>
+      <div>
         <section><Home /></section>
         <section><Login /></section>
         <section><PlanNow /></section>
         <section><About /></section>
-      </div> */}
+      </div>
     </>
   );
 }
