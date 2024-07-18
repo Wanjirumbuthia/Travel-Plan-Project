@@ -5,6 +5,10 @@ from flask_migrate import Migrate
 from flask import Flask, jsonify, request
 from flask_restful import Api, Resource
 import os
+from flask_bcrypt import Bcrypt
+from flask_jwt_extended import JWTManager, create_access_token
+import re
+from flask_cors import CORS
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 DATABASE = os.environ.get("DB_URI", f"sqlite:///{os.path.join(BASE_DIR, 'app.db')}")
@@ -20,10 +24,70 @@ db.init_app(app)
 
 api = Api(app)
 
+CORS(app)
+
+jwt = JWTManager(app)
+
+app.config['JWT_SECRET_KEY'] = 'group_6_travel_app' 
+
+
 @app.route("/")
 def index():
     return "<h1>Travel Planning App</h1>"
 
+bcrypt = Bcrypt(app)
+
+@app.route('/login', methods=['POST'])
+def login():
+    email = request.json['email']
+    password = request.json['password']
+    # Validate email and password
+    if not email or not password:
+        return jsonify({'error': 'Please enter both email and password'})
+    if not re.match(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$', email):
+        return jsonify({'error': 'Invalid email address'})
+    if len(password) < 4:
+        return jsonify({'error': 'Password must be at least 4 characters long'})
+
+    # Authenticate the user and return a token
+    user = User.query.filter_by(email=email).first()
+    if user and bcrypt.check_password_hash(user.password, password):
+        token = create_access_token(user.id)
+        return jsonify({'token': token})
+    else:
+        return jsonify({'error': 'Invalid username or password'})
+
+@app.route('/signup', methods=['POST'])
+def signup():
+    username = request.json['username']
+    email = request.json['email']
+    password = request.json['password']
+    confirm_password = request.json['confirmPassword']
+    # Validate email and password
+    if not email or not password:
+        return jsonify({'error': 'Please enter both email and password'})
+    if not re.match(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$', email):
+        return jsonify({'error': 'Invalid email address'})
+    if len(password) < 4:
+        return jsonify({'error': 'Password must be at least 4 characters long'})
+    if password != confirm_password:
+        return jsonify({'error': 'Passwords do not match'})
+
+    # Check if user with same email or username already exists
+    existing_user = User.query.filter_by(email=email).first()
+    if existing_user:
+        return jsonify({'error': 'User with same email already exists'})
+    existing_username = User.query.filter_by(username=username).first()
+    if existing_username:
+        return jsonify({'error': 'User with same username already exists'})
+
+    # Create a new user account
+    new_user = User(username=username, email=email, password=bcrypt.generate_password_hash(password).decode('utf-8'))
+    db.session.add(new_user)
+    db.session.commit()
+
+    # Return a success message or redirect to login page
+    return jsonify({'message': 'Sign up successful!'})
 
 @app.route("/users", methods=["GET"])
 def get_users():
