@@ -1,10 +1,27 @@
-import React from 'react'
-import "./navbar.css"
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlane } from '@fortawesome/free-solid-svg-icons';
+import './navbar.css';
 
 function Navbar() {
   return (
-    <div>Navbar</div>
-  )
+    <header>
+      <div className="container">
+        <h1 className="logo">
+          <FontAwesomeIcon icon={faPlane} /> 
+          Travel App 
+        </h1>
+        <nav>
+          <ul>
+            <li> Home </li>
+            <li>About </li>
+            <li>Profile </li>
+
+          </ul>
+        </nav>
+      </div>
+    </header>
+  );
 }
 
 export default Navbar;
