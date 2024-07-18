@@ -1,0 +1,48 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+  }
+  .hero{
+    display: flex;
+    height: 100vh;
+
+  /* background-image: url('/Beta.jpg');  */
+  
+
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin:0 auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgba(0,212,255,1);
+  }
+   
+  .content h1 {
+    font-size: 56px;
+    font-weight:bolder;
+  }
+  
+  .content p {
+    font-size: 30px;
+    margin: 15px 0;
+    max-width: 550px;
+    letter-spacing: 2px;
+  
+  }
+  .content a:hover {
+    color: #D607BA;
+    background-color: black;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 36px;
+    border-radius: 10px;
+    background: white
+  }

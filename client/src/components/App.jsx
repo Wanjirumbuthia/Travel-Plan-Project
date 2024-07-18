@@ -6,17 +6,19 @@ import About from "./Section/About/About";
 import PlanNow from "./Section/Plan-Now/PlanNow";
 import Login from "./Section/Login/Login";
 import Navbar from "./Layout/Navbar";
+import LandingPage from "./Layout/Landingpage/LandingPage";
 
 function App() {
   return (
     <>
+    <LandingPage />
       <Navbar />
       <div className="main-container">
       <section className="page page1">
-          <Home />
+          < PlanNow />
         </section>
         <section className="page page2">
-          <PlanNow />
+        <Home />
           <div>
           </div>
         </section>
