@@ -11,11 +11,21 @@ function App() {
   return (
     <>
       <Navbar />
-      <div>
-        {/* <section><Home /></section>
-        <section><Login /></section>
-        <section><PlanNow /></section> */}
-        <section><About /></section>
+      <div className="main-container">
+      <section className="page page1">
+          <Home />
+        </section>
+        <section className="page page2">
+          <PlanNow />
+          <div>
+          </div>
+        </section>
+        <section className="page page3">
+          <Login />
+        </section>
+        <section className="page page4">
+        <About/>
+        </section>
       </div>
     </>
   );
