@@ -1,8 +1,8 @@
-"""initial migration
+"""Initial migration
 
-Revision ID: 2980a3f6cb0e
+Revision ID: bac655a1726a
 Revises: 
-Create Date: 2024-07-18 12:43:50.328704
+Create Date: 2024-07-18 16:31:21.439613
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '2980a3f6cb0e'
+revision = 'bac655a1726a'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -21,6 +21,7 @@ def upgrade():
     op.create_table('categories',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('name', sa.String(), nullable=False),
+    sa.Column('image_url', sa.String(length=200), nullable=True),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_table('users',
@@ -36,6 +37,7 @@ def upgrade():
     sa.Column('destination', sa.String(), nullable=True),
     sa.Column('start_date', sa.DateTime(), nullable=False),
     sa.Column('end_date', sa.DateTime(), nullable=False),
+    sa.Column('image_url', sa.String(length=200), nullable=True),
     sa.Column('user_id', sa.Integer(), nullable=False),
     sa.ForeignKeyConstraint(['user_id'], ['users.id'], name=op.f('fk_trips_user_id_users')),
     sa.PrimaryKeyConstraint('id')
@@ -47,6 +49,7 @@ def upgrade():
     sa.Column('date', sa.DateTime(), nullable=False),
     sa.Column('time', sa.String(), nullable=False),
     sa.Column('cost', sa.Float(), nullable=False),
+    sa.Column('image_url', sa.String(length=200), nullable=True),
     sa.Column('trip_id', sa.Integer(), nullable=False),
     sa.ForeignKeyConstraint(['trip_id'], ['trips.id'], name=op.f('fk_activities_trip_id_trips')),
     sa.PrimaryKeyConstraint('id')
