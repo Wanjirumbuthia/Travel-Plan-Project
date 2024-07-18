@@ -281,5 +281,5 @@ def get_activity_categories():
     return jsonify(Activity_Category_list)
 
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     app.run(port=5555, debug=True)
