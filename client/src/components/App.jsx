@@ -12,13 +12,13 @@ function App() {
   return (
     <>
     <LandingPage />
-      {/* <Navbar />
+      <Navbar />
       <div className="main-container">
       <section className="page page1">
-          <Home />
+          < PlanNow />
         </section>
         <section className="page page2">
-          <PlanNow />
+        <Home />
           <div>
           </div>
         </section>
@@ -28,7 +28,7 @@ function App() {
         <section className="page page4">
         <About/>
         </section>
-      </div> */}
+      </div>
     </>
   );
 }
