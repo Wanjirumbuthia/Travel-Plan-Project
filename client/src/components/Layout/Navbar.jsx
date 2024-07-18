@@ -9,7 +9,7 @@ function Navbar() {
       <div className="container">
         <h1 className="logo">
           <FontAwesomeIcon icon={faPlane} /> 
-          Travel App 
+          Travel Plan
         </h1>
         <nav>
           <ul>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./app.css";
 import Home from "./Section/Home/Home";
 import About from "./Section/About/About";
@@ -10,26 +10,18 @@ import LandingPage from "./Layout/Landingpage/LandingPage";
 
 function App() {
   return (
-    <>
-    <LandingPage />
+    <Router>
+      <LandingPage />
       <Navbar />
       <div className="main-container">
-      <section className="page page1">
-          < PlanNow />
-        </section>
-        <section className="page page2">
-        <Home />
-          <div>
-          </div>
-        </section>
-        <section className="page page3">
-          <Login />
-        </section>
-        <section className="page page4">
-        <About/>
-        </section>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/plan-now" component={PlanNow} />
+          <Route path="/login" component={Login} />
+          <Route path="/about" component={About} />
+        </Switch>
       </div>
-    </>
+    </Router>
   );
 }
 

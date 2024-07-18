@@ -1,48 +1,97 @@
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-   
-  }
-  .hero{
-    display: flex;
-    height: 100vh;
+/* landingPage.css */
 
-  /* background-image: url('/Beta.jpg');  */
-  
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+}
 
-  }
-  
-  .content {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin:0 auto;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: rgba(0,212,255,1);
-  }
-   
-  .content h1 {
-    font-size: 56px;
-    font-weight:bolder;
-  }
-  
-  .content p {
-    font-size: 30px;
-    margin: 15px 0;
-    max-width: 550px;
-    letter-spacing: 2px;
-  
-  }
-  .content a:hover {
-    color: #D607BA;
-    background-color: black;
-    text-decoration: none;
-    padding: 12px 24px;
-    font-size: 36px;
-    border-radius: 10px;
-    background: white
-  }
+.landing-page {
+  text-align: center;
+  color: #333;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav li {
+  margin-left: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.hero {
+  background-image: url('https://images.pexels.com/photos/460740/pexels-photo-460740.jpeg?auto=compress&cs=tinysrgb&w=600');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 20px;
+  margin: 10px 0 20px;
+}
+
+.cta-button {
+  background: #ff6347;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #e5533d;
+}
+
+.footer {
+  background-color: #fff;
+  padding: 20px 10%;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
