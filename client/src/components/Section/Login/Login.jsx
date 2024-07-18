@@ -8,9 +8,87 @@ const LoginForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle login or signup logic here
-    console.log('Email:', email);
-    console.log('Password:', password);
+    const url = isSignUp ? 'http://127.0.0.1:5555/signup' : 'http://127.0.0.1:5555/login';
+    const data = isSignUp ? {
+      username: document.getElementById('name').value,
+      email: document.getElementById('email-signup').value,
+      password: document.getElementById('password-signup').value,
+      confirmPassword: document.getElementById('confirm-password').value,
+    } : {
+      email: email,
+      password: password,
+    };
+  
+    if (!isSignUp) {
+      // Validate email and password for login
+      if (!email || !password) {
+        alert('Please enter both email and password');
+        return;
+      }
+      if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+        alert('Invalid email address');
+        return;
+      }
+      if (password.length < 4) {
+        alert('Password must be at least 4 characters long');
+        return;
+      }
+  
+      // Make a request to the backend to validate the username and password
+      fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.valid) {
+            // Login is valid, proceed with login
+            fetch(url, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(data),
+            })
+              .then((response) => response.json())
+              .then((data) => {
+                console.log('Login successful!');
+                // You can redirect the user to the dashboard or display a success message
+              })
+              .catch((error) => {
+                console.error('Error:', error);
+                // You can display an error message to the user
+              });
+          } else {
+            alert('Invalid username or password');
+          }
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+          // You can display an error message to the user
+        });
+    } else {
+      // Sign up logic remains the same
+      fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log('Sign up successful!');
+          // You can redirect the user to the login page or display a success message
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+          // You can display an error message to the user
+        });
+    }
   };
 
   const handleToggle = () => {
