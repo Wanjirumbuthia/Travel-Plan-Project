@@ -5,6 +5,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LandingPage from "./components/Layout/Landingpage/LandingPage";
 import LoginForm from "./components/Section/Login/Login";
+import PlanNow from "./components/Section/Plan-Now/PlanNow";
 
 const router = createBrowserRouter([
     {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
     {
         path: "/app",
         element: <App />,
+    },
+    {
+        path: "/plan",
+        element: <PlanNow />,
     }
 
   ]);
