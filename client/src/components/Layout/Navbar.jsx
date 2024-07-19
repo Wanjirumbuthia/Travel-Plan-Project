@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlane } from '@fortawesome/free-solid-svg-icons';
 import './navbar.css';
@@ -14,7 +15,7 @@ function Navbar() {
         <nav>
           <ul>
             <li> Home </li>
-            <li>Plan</li>
+            <li><Link to="/plan">Plan</Link></li>
             <li>Profile </li>
             <li>About </li>
 
