@@ -48,11 +48,17 @@ User Profile management: Allows users to log in/Sign up and securely sign out wh
 Authentication: Functionalities for login, signup, and sign out using tokens stored in localStorage, providing a seamless and secure experience for users to plan and book their trips.
 
 # Project Solutions
+
 The project addresses several key solutions to ensure its effectiveness and usability:
+
 => Comprehensive Platform: Provides detailed product listings complete with images, descriptions, and pricing, catering to informed consumer decision-making.
+
 => User-Friendly Interface: Ensures ease of navigation with a responsive navbar and structured page layouts, enhancing user experience across all sections of the website.
+
 =>Secure Transactions: Implements robust authentication and authorization mechanisms, safeguarding user interactions and transactions against unauthorized access.
+
 => Effective Communication Channels: Integrates contact forms to facilitate seamless communication between users and administrators, ensuring prompt responses to inquiries and feedback.
+
 => Dynamic Content Management: Features client testimonials to build credibility and trust among potential customers, fostering a positive user perception of the platform.
 
 # Minimum Viable Product (MVP):
