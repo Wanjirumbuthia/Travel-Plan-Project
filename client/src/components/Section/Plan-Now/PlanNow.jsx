@@ -47,8 +47,72 @@ function PlanNow() {
     ),
   });
 
-  const onSubmit = (values, { setSubmitting }) => {
+  const onSubmit = (values, { setSubmitting, resetForm }) => {
     console.log('Form Values:', values);
+
+    // Validate the request data
+    if (!values.city || !values.startDate || !values.endDate || !values.category || !values.activities) {
+      console.error('Invalid request data');
+      return;
+    }
+
+    // Validate each activity object
+    values.activities.forEach((activity) => {
+      if (!activity.description || !activity.time || !activity.cost) {
+        console.error('Invalid activity data');
+        return;
+      }
+    });
+
+    // Convert startDate and endDate to date objects
+    const startDate = new Date(values.startDate);
+    const endDate = new Date(values.endDate);
+
+    const startDateIso = startDate.toISOString();
+    const endDateIso = endDate.toISOString();
+
+    // Post trip data
+    fetch('http://127.0.0.1:5555/trips', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        city: values.city,
+        startDate: startDateIso, // Convert date to ISO string
+        endDate: endDateIso, // Convert date to ISO string
+      }),
+    })
+    .then(response => response.json())
+    .then(data => {
+      const tripId = data.id;
+
+      // Post activities data
+      const activityPromises = values.activities.map((activity) =>
+        fetch('http://127.0.0.1:5555/activities', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            description: activity.description,
+            date: activity.time,
+            time: activity.time,
+            cost: parseFloat(activity.cost), // Convert cost to float
+            trip_id: tripId,
+          }),
+        })
+        .then(response => response.json())
+      );
+
+      return Promise.all(activityPromises);
+    })
+    .then(() => {
+      alert('Trip and activities posted successfully!');
+      resetForm(); // Reset the form after successful submission
+    })
+    .catch(error => console.error(error));
+
     setSubmitting(false);
   };
 
@@ -200,4 +264,5 @@ function PlanNow() {
 }
 
 export default PlanNow;
+
 
