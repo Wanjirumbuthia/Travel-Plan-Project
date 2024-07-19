@@ -1,6 +1,7 @@
 import React from 'react';
 import './paristripcard.css'
 import About from '../../About/About';
+import { Link } from 'react-router-dom';
 
 const ParisTripCard = () => {
   const cards = [
@@ -10,6 +11,7 @@ const ParisTripCard = () => {
       title: 'Sightseeing',
       description: 'Category',
       price: '$150',
+      link: '/plan',
       
       
     },
@@ -18,7 +20,8 @@ const ParisTripCard = () => {
       imageUrl: 'https://i.pinimg.com/474x/bc/02/ac/bc02acd737e86ad48986757bd5e717bc.jpg',
       title: 'Tour Guide',
       description: 'Category',
-      price:'$6.5'
+      price:'$6.5',
+      link: '/plan',
       
       
     },
@@ -27,7 +30,8 @@ const ParisTripCard = () => {
       imageUrl: 'https://images.pexels.com/photos/17189976/pexels-photo-17189976/free-photo-of-tourist-posing-under-eiffel-tower.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       title: 'Eiffel Tower visit',
       description: 'Activity',
-      price:'$0'
+      price:'$0',
+      link: '/plan',
      
     },
     {
@@ -35,7 +39,8 @@ const ParisTripCard = () => {
       imageUrl: 'https://images.pexels.com/photos/2775742/pexels-photo-2775742.jpeg?auto=compress&cs=tinysrgb&w=600',
       title: 'Seine River Cruise',
       description: 'Activity',
-      price:'$7.6'
+      price:'$7.6',
+      link: '/plan',
       
     }
   ];
@@ -57,7 +62,7 @@ const ParisTripCard = () => {
                   <h4>{card.title}</h4>
                   <h6>{card.description}</h6>
                   <h10>{card.price}</h10>
-                  <button>
+                  <button onClick={(e) => window.location.href = card.link}>
   <span class="span-mother">
     <span>P</span>
     <span>L</span>

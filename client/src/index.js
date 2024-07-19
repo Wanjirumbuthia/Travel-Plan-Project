@@ -12,6 +12,7 @@ import ParisTripCard from "./components/Section/Trips-Cards/ParisTripCard/ParisT
 import BrazilTripCard from "./components/Section/Trips-Cards/BrazilTripcard/BrazilTripCard";
 import NewyorkTripCard from "./components/Section/Trips-Cards/NewyorkTripCard/NewyorkTripCard";
 import SydneyTripCard from "./components/Section/Trips-Cards/SydneyTripCard/SydneyTripCard";
+import TokyoTripCard from "./components/Section/Trips-Cards/TokyoTripCard/TokyoTripCard"
 
 const router = createBrowserRouter([
     {
@@ -30,6 +31,14 @@ const router = createBrowserRouter([
       path: "/home",
       element: <Home />,
   },
+  {
+    path: "/tokyo",
+    element: <TokyoTripCard />,
+},
+  {
+    path: "/about",
+    element: <About />,
+},
   {
     path: "/about",
     element: <About />,

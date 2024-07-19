@@ -19,16 +19,11 @@ function Home() {
       route: '/new_york'
     },
     {
-      image: 'https://images.pexels.com/photos/2482308/pexels-photo-2482308.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
-      location: 'Pyramids of Gaza',
-      title: 'Egypt',
-      btn_txt: 'View Egypt'
-    },
-    {
-      image: 'https://images.pexels.com/photos/3123690/pexels-photo-3123690.jpeg?auto=compress&cs=tinysrgb&w=600',
-      location: 'Sahara Desert',
-      title: 'Morocco',
-      btn_txt: 'View Morocco'
+      image: 'https://images.pexels.com/photos/161251/senso-ji-temple-japan-kyoto-landmark-161251.jpeg?auto=compress&cs=tinysrgb&w=600https://images.pexels.com/photos/2482308/pexels-photo-2482308.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+      location: 'Pyramids of GazaOrange Temple',
+      title: 'Tokyo',
+      btn_txt: 'View Tokyo',
+      route :'/tokyo'
     },
     {
       image: 'https://images.pexels.com/photos/1536436/pexels-photo-1536436.jpeg?auto=compress&cs=tinysrgb&w=600',
