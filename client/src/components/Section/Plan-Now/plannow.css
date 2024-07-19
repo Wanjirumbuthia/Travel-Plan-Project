@@ -1,5 +1,8 @@
  
-.plan {
+body{
+  background: rgb(37, 83, 85);
+background: linear-gradient(180deg, rgb(37, 83, 85) 0%, rgba(0,196,197,1) 76%, rgba(0,0,0,1) 98%);
+}.plan {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
