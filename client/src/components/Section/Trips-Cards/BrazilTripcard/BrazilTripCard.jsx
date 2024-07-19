@@ -1,6 +1,7 @@
 import React from 'react';
 import './braziltripcard.css'
 import About from '../../About/About';
+import { Link } from 'react-router-dom';
 
 const BrazilTripCard = () => {
   const cards = [
@@ -10,6 +11,7 @@ const BrazilTripCard = () => {
       title: 'Helly Experience',
       description: 'Category',
       price: '$200',
+      link: '/plan'
       
       
     },
@@ -18,7 +20,8 @@ const BrazilTripCard = () => {
       imageUrl: 'https://images.pexels.com/photos/2599136/pexels-photo-2599136.jpeg?auto=compress&cs=tinysrgb&w=600',
       title: 'Off-shore',
       description: 'Category',
-      price:'$6.5'
+      price:'$6.5',
+      link: '/plan',
       
       
     },
@@ -27,7 +30,8 @@ const BrazilTripCard = () => {
       imageUrl: 'https://i.pinimg.com/564x/fe/c3/04/fec304a220500dacb82501a27181915d.jpg',
       title: 'Christ the Redeemer visit',
       description: 'Activity',
-      price:'$0'
+      price:'$0',
+      link: '/plan',
      
     },
     {
@@ -35,7 +39,8 @@ const BrazilTripCard = () => {
       imageUrl: 'https://i.pinimg.com/474x/6b/03/87/6b0387a4052641c690839808d6709655.jpg',
       title: 'Sugarloaf Mountain cable car',
       description: 'Activity',
-      price:'$7.6'
+      price:'$7.6',
+      link: '/plan',
       
     }
   ];
@@ -57,7 +62,7 @@ const BrazilTripCard = () => {
                   <h4>{card.title}</h4>
                   <h6>{card.description}</h6>
                   <h10>{card.price}</h10>
-                  <button>
+                  <button onClick={(e) => window.location.href = card.link}>
   <span class="span-mother">
     <span>P</span>
     <span>L</span>

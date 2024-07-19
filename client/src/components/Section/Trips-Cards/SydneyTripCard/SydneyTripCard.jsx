@@ -1,6 +1,7 @@
 import React from 'react';
 import './sydneytripcard.css'
 import About from '../../About/About';
+import { Link } from 'react-router-dom';
 
 const SydneyTripCard = () => {
   const cards = [
@@ -10,6 +11,7 @@ const SydneyTripCard = () => {
       title: 'Relaxation',
       description: 'Category',
       price: '$6',
+      link: '/plan',
       
       
     },
@@ -18,7 +20,8 @@ const SydneyTripCard = () => {
       imageUrl: 'https://images.pexels.com/photos/1878293/pexels-photo-1878293.jpeg?auto=compress&cs=tinysrgb&w=600',
       title: 'Sightseeing',
       description: 'Category',
-      price:'$5'
+      price:'$5',
+      link: '/plan',
       
       
     },
@@ -27,7 +30,8 @@ const SydneyTripCard = () => {
       imageUrl: 'https://images.pexels.com/photos/2404843/pexels-photo-2404843.jpeg?auto=compress&cs=tinysrgb&w=600',
       title: 'Empire state Building',
       description: 'Activity',
-      price:'$0'
+      price:'$0',
+      link: '/plan',
      
     },
     {
@@ -35,7 +39,8 @@ const SydneyTripCard = () => {
       imageUrl: 'https://i.pinimg.com/474x/80/6c/0b/806c0b6e22e117b637843bfe9b9825f7.jpg',
       title: 'Statue of Liberty tour',
       description: 'Activity',
-      price:'$7.6'
+      price:'$7.6',
+      link: '/plan',
       
     }
   ];
@@ -57,7 +62,7 @@ const SydneyTripCard = () => {
                   <h4>{card.title}</h4>
                   <h6>{card.description}</h6>
                   <h10>{card.price}</h10>
-                  <button>
+                  <button onClick={(e) => window.location.href = card.link}>
   <span class="span-mother">
     <span>P</span>
     <span>L</span>
