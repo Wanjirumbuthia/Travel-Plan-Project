@@ -21,10 +21,15 @@ A travel planning app is a platform that allows users to plan and share their it
 ### Features
 # Backend
 The system's backend is built using two powerful technologies: Flask API and SQLAlchemy ORM. Flask API provides a strong foundation for building the application's backend, allowing for the creation of a robust and scalable API that can handle a large volume of requests. Meanwhile, SQLAlchemy ORM acts as a bridge between the application's code and the database, enabling the system to interact with the database in a efficient and reliable manner. CRUD operations are fully implemented for Travel Itineraries, enabling users to manage their trips efficiently.
+
 User Management: Create, read, update, and delete user profiles with role-based access control (admin and traveler roles), allowing administrators to manage user accounts and travelers to access their personalized travel information.
+
 Destination Management: Create, read, update, and delete destination listings with detailed information such as location, description, attractions, activities, and accommodation options.
+
 Booking Management: Create, read, update, and delete bookings, associating them with users and travel itineraries, and allowing users to manage their travel plans seamlessly.
+
 Authentication: Secure login using email or social media accounts with hashed passwords  ensuring that user accounts and travel plans remain secure and protected.
+
 # Frontend
 The front end leverages React along with React Router for intuitive client-side routing and navigation.
 Dynamic Navbar: Easy access to various sections including Home, About, Destinations, Sign Up, Login, and User Profile.
