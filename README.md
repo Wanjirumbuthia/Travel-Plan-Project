@@ -4,10 +4,15 @@
 
 ### By;
 1.Rihanna Njuguna
+
 2.Wanjiru Mbuthia
+
 3.Lemuel Vincent
+
 4.Gideon Mutai
+
 5.Ian Mwangi
+
 6.Erick Ndirangu
 
 ### Project Description
@@ -32,7 +37,9 @@ Authentication: Functionalities for login, signup, and sign out using tokens sto
 # Project Solutions
 The project addresses several key solutions to ensure its effectiveness and usability:
 => Comprehensive Platform: Provides detailed product listings complete with images, descriptions, and pricing, catering to informed consumer decision-making. => User-Friendly Interface: Ensures ease of navigation with a responsive navbar and structured page layouts, enhancing user experience across all sections of the website. =>Secure Transactions: Implements robust authentication and authorization mechanisms, safeguarding user interactions and transactions against unauthorized access. => Effective Communication Channels: Integrates contact forms to facilitate seamless communication between users and administrators, ensuring prompt responses to inquiries and feedback. => Dynamic Content Management: Features client testimonials to build credibility and trust among potential customers, fostering a positive user perception of the platform.
-# Minimum Viable Product (MVP): The Minimum Viable Product (MVP) for the travel booking website includes essential features necessary for the initial launch:
+# Minimum Viable Product (MVP):
+
+The Minimum Viable Product (MVP) for the travel booking website includes essential features necessary for the initial launch:
 Homepage: Centrally features a search bar and categorized destination listings, providing a user-friendly entry point to explore available travel options.
 Destination Pages: Offers detailed destination descriptions, including information on attractions, activities, and accommodation options, to assist users in making informed travel decisions. Includes a "Book Now" button that updates the availability of travel packages. When a destination is clicked, it takes users to a route with more details on the destination.
 Itinerary and Booking: Allows users to view their travel plans, adjust travel dates, and proceed to secure payment processing for booking flights, hotels, and activities.
