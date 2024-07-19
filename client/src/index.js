@@ -5,6 +5,8 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LandingPage from "./components/Layout/Landingpage/LandingPage";
 import LoginForm from "./components/Section/Login/Login";
+import Home from "./components/Section/Home/Home";
+import About from "./components/Section/About/About";
 import PlanNow from "./components/Section/Plan-Now/PlanNow";
 import ParisTripCard from "./components/Section/Trips-Cards/ParisTripCard/ParisTripCard";
 import BrazilTripCard from "./components/Section/Trips-Cards/BrazilTripcard/BrazilTripCard";
@@ -24,6 +26,14 @@ const router = createBrowserRouter([
         path: "/app",
         element: <App />,
     },
+    {
+      path: "/home",
+      element: <Home />,
+  },
+  {
+    path: "/about",
+    element: <About />,
+},
     {
         path: "/plan",
         element: <PlanNow />,

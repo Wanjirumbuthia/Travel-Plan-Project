@@ -13,11 +13,11 @@ import SydneyTripCard from "./Section/Trips-Cards/SydneyTripCard/SydneyTripCard"
 function App() {
   return (
     <>
-      {/* <Navbar />
+      <Navbar />
       <div className="main-container">
           <Home />
           
-      </div> */}
+      </div>
       {/* <BrazilTripCard /> */}
       {/* <ParisTripCard /> */}
 {/* <NewyorkTripCard /> */}

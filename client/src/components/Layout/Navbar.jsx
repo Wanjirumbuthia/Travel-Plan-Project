@@ -14,10 +14,10 @@ function Navbar() {
         </h1>
         <nav>
           <ul>
-            <li> Home </li>
+          <li><Link to="/home">Home</Link></li>
             <li><Link to="/plan">Plan</Link></li>
-            <li>Profile </li>
-            <li>About </li>
+            
+            <li><Link to="/About">About</Link></li>
 
 
 
