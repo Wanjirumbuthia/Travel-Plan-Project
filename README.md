@@ -1,6 +1,8 @@
-###TRAVELLING PLATFORM WEBSITE
-###Date: 2024/07/18
-###By
+### TRAVELLING PLATFORM WEBSITE
+
+### Date: 2024/07/18
+
+### By;
 1.Rihanna Njuguna
 2.Wanjiru Mbuthia
 3.Lemuel Vincent
@@ -8,7 +10,7 @@
 5.Ian Mwangi
 6.Erick Ndirangu
 
-###Project Description
+### Project Description
 A travel planning app is a platform that allows users to plan and share their itineraries.It's a one-stop-shop for organizing travel plans.
 
 ### Features
