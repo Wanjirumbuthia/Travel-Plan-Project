@@ -1,6 +1,7 @@
 import React from 'react';
 import './about.css'; 
 import { FaFacebook, FaTwitter, FaDribbble, FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
+import { Router } from 'react-router-dom';
 
 function About() {
   return (
