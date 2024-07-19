@@ -11,8 +11,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(6,68,84);
-    background: linear-gradient(90deg, rgba(6,68,84,1) 0%, rgba(9,92,121,1) 35%, rgba(0,212,255,1) 100%);
+    background: rgb(163,167,241);
+    background: linear-gradient(180deg, rgba(163,167,241,1) 0%, rgba(0,196,197,1) 88%, rgba(0,0,0,1) 98%);
     font-family: 'Nunito', sans-serif;
   }
   

@@ -27,8 +27,8 @@ const SydneyTripCard = () => {
     },
     {
       id: 3,
-      imageUrl: 'https://images.pexels.com/photos/2404843/pexels-photo-2404843.jpeg?auto=compress&cs=tinysrgb&w=600',
-      title: 'Empire state Building',
+      imageUrl: 'https://images.pexels.com/photos/15229717/pexels-photo-15229717/free-photo-of-aerial-view-of-the-sydney-harbour-bridge-under-blue-sky-sydney-australia.jpeg?auto=compress&cs=tinysrgb&w=600',
+      title: 'Harbour Bridge',
       description: 'Activity',
       price:'$0',
       link: '/plan',
@@ -36,8 +36,8 @@ const SydneyTripCard = () => {
     },
     {
       id: 1,
-      imageUrl: 'https://i.pinimg.com/474x/80/6c/0b/806c0b6e22e117b637843bfe9b9825f7.jpg',
-      title: 'Statue of Liberty tour',
+      imageUrl: 'https://images.pexels.com/photos/635512/pexels-photo-635512.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      title: 'Cruise',
       description: 'Activity',
       price:'$7.6',
       link: '/plan',
