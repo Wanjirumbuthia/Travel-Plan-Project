@@ -21,7 +21,7 @@ function App() {
       {/* <BrazilTripCard /> */}
       {/* <ParisTripCard /> */}
 {/* <NewyorkTripCard /> */}
-<SydneyTripCard />
+{/* <SydneyTripCard /> */}
       
     </>
   );
